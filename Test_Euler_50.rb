@@ -3,10 +3,11 @@ require 'test/unit'
 
 class TestEuler50 < Test::Unit::TestCase
    
-  TEST_CONS_PRIMES = { 100    => 41,
-                       1000   => 953,
-                       #10000  => 9521
-                        }
+  TEST_CONS_PRIMES = { 100     => 41,
+                       1000    => 953,
+                       10000   => 9521,
+                       100000  => 92951,
+                       1000000 => 997651 }
   
   def test_find_cons_primes
     TEST_CONS_PRIMES.each{ |input,output| assert_equal(output,@euler50.find_cons_primes(input))}

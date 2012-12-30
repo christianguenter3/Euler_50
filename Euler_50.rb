@@ -21,9 +21,7 @@ class Euler_50
       sum_primes << x
       sum = sum_primes.inject(:+)
       break if sum > @limit
-      if sum_primes.length > @max_prime_fact
-        @max, @max_prime_fact = sum, sum_primes.length if Prime.prime?(sum)
-      end
+      @max, @max_prime_fact = sum, sum_primes.length if sum_primes.length > @max_prime_fact && Prime.prime?(sum)
     end
   end
 
